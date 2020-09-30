@@ -1,9 +1,11 @@
-import Exercises.Easy.ReverseInteger;
+import Exercises.Medium.ZigzagConversion;
 
 public class Main {
     public static void main(String[] args) {
-        /* int[] input = { 8, 3, 5, 2, 1 }; */
-        int val = 1527;
-        System.out.println(ReverseInteger.reverse(val));
+        // String input = "PAYPALISHIRING";
+        String input = "HOLAMUNDO";
+        String output = ZigzagConversion.convert(input, 3);
+
+        System.out.println(output);
     }
 }
