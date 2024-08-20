@@ -1,11 +1,11 @@
-import Exercises.Medium.ZigzagConversion;
+import Exercises.Easy.CountPrimes;
 
 public class Main {
-    public static void main(String[] args) {
-        // String input = "PAYPALISHIRING";
-        String input = "HOLAMUNDO";
-        String output = ZigzagConversion.convert(input, 3);
+    static final int INPUT = 20;
 
-        System.out.println(output);
+    public static void main(String[] args) {
+
+        int n = CountPrimes.countPrimes(INPUT);
+        System.out.println("Existen " + n + " numeros primos desde 0 hasta " + INPUT);
     }
 }
