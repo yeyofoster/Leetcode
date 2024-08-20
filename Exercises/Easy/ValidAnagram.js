@@ -16,16 +16,14 @@ var isAnagram = function (s, t) {
         for (const letter of t) {
             const value = map.get(letter);
             // console.log(letter, value);
-            if (value > 1) {
+            if (value > 0) {
                 map.set(letter, value - 1);
-            } else if (value === 1) {
-                map.delete(letter);
             } else {
                 return false;
             }
         }
         // console.table(map);
-        return map.size === 0;
+        return true;
     }
 };
 
