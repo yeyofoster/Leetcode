@@ -1,4 +1,4 @@
-package Exercises.Easy;
+package Exercises.Easy.Java;
 
 public class ReverseInteger {
     public static int reverse(int x) {

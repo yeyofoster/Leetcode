@@ -1,4 +1,4 @@
-package Exercises.Easy;
+package Exercises.Easy.Java;
 
 import java.util.Arrays;
 

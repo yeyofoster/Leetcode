@@ -1,4 +1,4 @@
-package Exercises.Easy;
+package Exercises.Easy.Java;
 
 public class BuddyStrings {
     public static boolean buddyStrings(String A, String B) {

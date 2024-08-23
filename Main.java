@@ -1,4 +1,4 @@
-import Exercises.Easy.CountPrimes;
+import Exercises.Easy.Java.CountPrimes;
 
 public class Main {
     static final int INPUT = 20;

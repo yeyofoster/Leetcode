@@ -1,4 +1,4 @@
-package Exercises.Easy;
+package Exercises.Easy.Java;
 
 public class CountPrimes {
     public static int countPrimes(int n) {
