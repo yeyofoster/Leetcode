@@ -3,28 +3,37 @@
  * @return {boolean}
  */
 var isHappy = function (n) {
-    let seenNumbers = new Map();
-    let currentDigit = 0;
-    while (!seenNumbers.has(n)) {
-        seenNumbers.set(n, n);
-        let numString = n.toString();
-        let sumSquares = 0;
-        for (let i = 0; i < numString.length; i++) {
-            currentDigit = Number.parseInt(numString.charAt(i));
-            sumSquares += currentDigit * currentDigit;
-        }
-        console.table(seenNumbers);
-        if (sumSquares === 1) {
-            return true;
+    let seenNumbers = new Set();
+    while (n > 1) {
+        seenNumbers.add(n);
+        let sumSquares = sumOfSquares(n);
+
+        if (seenNumbers.has(sumSquares)) {
+            return false;
         }
         n = sumSquares;
     }
-
-    return false;
+    return true;
 };
 
-const input = 23;
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var sumOfSquares = function (n) {
+    var sum = 0;
+    var currentDigit = 0;
 
-console.time("isHappy");
+    while (n > 0) {
+        currentDigit = n % 10;
+        sum += currentDigit * currentDigit;
+        n = Number.parseInt(n / 10);
+    }
+    return sum;
+};
+
+const input = 19;
+
+console.time("Execution time");
 console.log(`Is ${input} a happy number?: ${isHappy(input)}`);
-console.timeEnd("isHappy");
+console.timeEnd("Execution time");
