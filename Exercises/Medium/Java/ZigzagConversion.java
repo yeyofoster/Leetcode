@@ -1,4 +1,4 @@
-package Exercises.Medium;
+package Exercises.Medium.Java;
 
 public class ZigzagConversion {
     public static String convert(String s, int numRows) {
